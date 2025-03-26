@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: od44ya9zw-python-gitops
+  description: This is GitOps manifest for od44ya9zw-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=od44ya9zw-python
+    backstage.io/kubernetes-id: od44ya9zw-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: od44ya9zw-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:od44ya9zw-python
